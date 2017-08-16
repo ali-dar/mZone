@@ -1,0 +1,81 @@
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.53.1"
+
+default_platform :ios
+
+platform :ios do
+
+  # 1
+  desc "Creating a code signing certificate and provisioning profile"
+  # 2
+  lane :provision do
+    # 3
+    produce(
+      app_name: 'mZone Poker alidar',
+      language: 'English',
+      app_version: '1.0',
+      sku: '123abc'
+    )
+    # 4
+    cert
+    # 5
+    sigh(force: true)
+  end
+
+  lane :provision_adhoc do
+    # 3
+    produce(
+      app_name: 'mZone Poker alidar',
+      language: 'English',
+      app_version: '1.0',
+      sku: '123abc'
+    )
+    # 4
+    cert
+    # 5
+    sigh(force: true, adhoc: true)
+  end
+
+  desc "Take screenshots"
+  lane :screenshot do
+    snapshot
+  end
+
+ desc "Create ipa"
+  lane :build do
+    increment_build_number
+    gym
+  end
+  
+  desc "Upload to App Store and submit for review"
+  lane :upload do
+    deliver(
+      submit_for_review: true
+    )
+  end
+
+  desc "Provision, take screenshots, build and upload to App Store"
+  lane :do_everything do
+    provision
+   # screenshot
+    build
+    upload
+  end
+
+lane :beta do
+  increment_build_number
+  gym
+  testflight
+end
+
+lane :hhh do
+  gym(export_method: "ad-hoc")
+  hockey(api_token: "d9d7a3aec7544f77ac3e59cd11205f33")
+end
+
+error do |lane, exception|
+  # This block is called if there was an error running a lane.
+  end
+
+end
