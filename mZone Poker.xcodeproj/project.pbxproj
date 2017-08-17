@@ -394,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ali Dar (UHDNML9R9D)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ali Dar (UHDNML9R9D)";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = UHDNML9R9D;
 				INFOPLIST_FILE = "mZone Poker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -415,7 +415,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ali Dar (UHDNML9R9D)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Ali Dar (UHDNML9R9D)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ali Dar (UHDNML9R9D)";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = UHDNML9R9D;
 				INFOPLIST_FILE = "mZone Poker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
